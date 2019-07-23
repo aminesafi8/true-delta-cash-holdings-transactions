@@ -28,7 +28,7 @@ public class HoldingDeltaController {
 	private HoldingDeltaRepository holdingDeltaRepository;
 
 	@GetMapping("holding-deltas-distinct")
-	public List<String> queryAllCategory() {
+	public List<String> allHoldingDeltasDistinct() {
 
 		DistinctIterable<String> iterable = mongoTemplate.getCollection("holdingDelta").distinct("recon_break",
 				String.class);
